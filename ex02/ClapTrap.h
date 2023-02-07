@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.h                                         :+:      :+:    :+:   */
+/*   ClapTrap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 17:12:40 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 17:14:12 by ziloughm         ###   ########.fr       */
+/*   Created: 2023/02/07 12:28:20 by ziloughm          #+#    #+#             */
+/*   Updated: 2023/02/07 20:09:34 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#   ifndef SCAVTRAP_H
-# define SCAVTRAP_H
+#   ifndef CLAPTRAP_H
+# define CLAPTRAP_H
 
+#include <iostream>
+#include <string>
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
+#define GRN "\033[0;32m"
+#define WHT "\033[0;0m"
+#define RED "\033[0;31m"
 
-#endif
+#   endif
