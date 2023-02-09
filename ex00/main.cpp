@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:28:03 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 15:58:09 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:23:36 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main(void)
     ClapTrap b("test2");
     ClapTrap c("test1");
     ClapTrap d(b);
+    ClapTrap *e = new ClapTrap("Test4");
 
     a = c;
 
@@ -48,6 +49,8 @@ int main(void)
     std::cout << b;
     std::cout << GRN << "--------- End Test2 ---------" << WHT << std::endl;
     std::cout << RED << "/----------------------------/" << WHT << std::endl << std::endl;
+    std::cout << *e;
+    delete(e);
 
     return(0);
 }

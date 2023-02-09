@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:30:50 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 17:21:00 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:37:50 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class ClapTrap
         unsigned int    _attack_p;
     public:
         ClapTrap();
-        ~ClapTrap();
+        virtual ~ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(ClapTrap const &ob);
         ClapTrap & operator=(ClapTrap const &ob);
-        void            attack(const std::string& target);
+        virtual void    attack(const std::string & target);
         void            takeDamage(unsigned int amount);
         void            beRepaired(unsigned int amount);
         std::string     getName(void) const;

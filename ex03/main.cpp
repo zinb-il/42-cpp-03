@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:28:03 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 21:47:17 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:48:26 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int main(void)
 {
-    DiamondTrap a;
-    
-    // FragTrap a;
-    // FragTrap b("test2");
-    // FragTrap c("test1");
-    // FragTrap d(b);
+    // DiamondTrap a;
+    // DiamondTrap b("test2");
+    // DiamondTrap c("test1");
+    // DiamondTrap d(b);
 
     // a = c;
 
@@ -54,7 +52,28 @@ int main(void)
     // std::cout << GRN << "---------   Test3   ---------" << WHT << std::endl;
     // c.takeDamage(1);
     // c.highFivesGuys();
+    // c.whoAmI();
     // std::cout << GRN << "--------- End Test3 ---------" << WHT << std::endl;
+    // std::cout << RED << "/----------------------------/" << WHT << std::endl << std::endl;
+
+    // std::cout << RED << "/----------------------------/" << WHT << std::endl;
+    // std::cout << GRN << "---------   Test4   ---------" << WHT << std::endl;
+    ClapTrap *a = new DiamondTrap("test1");
+    DiamondTrap b("test2");
+    //DiamondTrap c;
+    //DiamondTrap a("test1");
+    //ClapTrap &c = a;
+
+    //c.attack("a");
+    std::cout << *a << b << std::endl;
+    b.attack("b");
+    a->attack("a");
+    b.guardGate();
+    b.highFivesGuys();
+    b.whoAmI();
+    std::cout << std::endl << *a << b << std::endl;
+    delete(a);
+    // std::cout << GRN << "--------- End Test4 ---------" << WHT << std::endl;
     // std::cout << RED << "/----------------------------/" << WHT << std::endl << std::endl;
 
     return(0);

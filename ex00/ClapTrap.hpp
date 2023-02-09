@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:30:50 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 15:33:11 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:12:55 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,21 @@ class ClapTrap
         unsigned int    _energy_p;
         unsigned int    _attack_p;
     public:
+        //Constructors  and Destructor
         ClapTrap();
         ~ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(ClapTrap const &ob);
+        
+        // Assignment Operator Overload
         ClapTrap & operator=(ClapTrap const &ob);
+        
+        //Calss functions
         void            attack(const std::string& target);
         void            takeDamage(unsigned int amount);
         void            beRepaired(unsigned int amount);
+
+        //Getter, Setters functions
         std::string     getName(void) const;
         unsigned int    getHP(void) const;
         unsigned int    getEP(void) const;

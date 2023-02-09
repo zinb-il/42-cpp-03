@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:15:47 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 18:28:39 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:09:31 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /*                     Constructors  and Destructor                 */
 /********************************************************************/
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(): ClapTrap()
 {
     this->_name = "none";
     this->_hit_p = 100;
@@ -25,7 +25,7 @@ ScavTrap::ScavTrap()
     std::cout << "ScavTrap Default constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
     this->_name = name;
     this->_hit_p = 100;

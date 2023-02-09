@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 20:07:17 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 20:21:33 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:43:19 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /********************************************************************/
 /*                     Constructors  and Destructor                 */
 /********************************************************************/
-FragTrap::FragTrap()
+FragTrap::FragTrap(): ClapTrap()
 {
     this->_name = "none";
     this->_hit_p = 100;
@@ -24,7 +24,7 @@ FragTrap::FragTrap()
     std::cout << "FragTrap Default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
     this->_name = name;
     this->_hit_p = 100;
@@ -66,6 +66,20 @@ FragTrap & FragTrap::operator=(FragTrap const & ob)
 /********************************************************************/
 /*                          Public functions                        */
 /********************************************************************/
+
+void    FragTrap::attack(const std::string& target)
+{
+    if (!_hit_p)
+        std::cout << "FragTrap " << _name << " is already dead." << std::endl;
+    else if (!_energy_p)
+        std::cout << "FragTrap " << _name << " doesn't have energy." << std::endl;
+    else
+    {
+       std::cout << "FragTrap " << _name << " attacks " << target;
+       std::cout << ", causing " << _attack_p << " points of damage!" << std::endl;
+        --_energy_p;
+    }
+}
 
 void FragTrap::highFivesGuys(void) const
 {

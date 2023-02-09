@@ -6,7 +6,7 @@
 /*   By: ziloughm <ziloughm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:44:12 by ziloughm          #+#    #+#             */
-/*   Updated: 2023/02/07 18:13:35 by ziloughm         ###   ########.fr       */
+/*   Updated: 2023/02/09 11:00:00 by ziloughm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap():_name("none"), _hit_p(10), _energy_p(10), _attack_p(0)
 
 ClapTrap::ClapTrap(std::string name):_name(name), _hit_p(10), _energy_p(10), _attack_p(0)
 {
-    std::cout << "ClapTrap Parameter constroctur called" << std::endl;
+    std::cout << "ClapTrap Parameter constroctur called " << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &ob)
